@@ -289,7 +289,7 @@ function rendreFooter() {
       credits)
   ), el("p", { class: "footer-note" },
     el("span", { "data-i18n": "footer_note" }, t("footer_note")),
-    " · © " + new Date().getFullYear() + " MarchéPrix · ",
+    " · © " + new Date().getFullYear() + " Novembre Numérique, WenakLabs · ",
     el("a", { href: "https://www.openstreetmap.org/copyright", rel: "noopener", target: "_blank" }, "© OpenStreetMap")));
 }
 

@@ -1,5 +1,7 @@
 # Crédits
 
+© 2026 Novembre Numérique, WenakLabs. Tous droits réservés, sauf les photos et la carte ci-dessous, qui restent sous leurs propres licences.
+
 ## Photos (licence Pexels : usage libre, attribution appréciée)
 
 | Fichier | Auteur | Source |

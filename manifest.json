@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "MarchéPrix — Les prix des marchés de N'Djamena",
+  "short_name": "MarchéPrix",
+  "description": "Comparez les prix des produits dans les marchés de N'Djamena.",
+  "lang": "fr",
+  "dir": "auto",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#b5470b",
+  "categories": ["food", "shopping"],
+  "icons": [
+    { "src": "images/icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "images/icones/icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Tous les prix", "url": "./prix.html", "icons": [{ "src": "images/icones/icone-192.png", "sizes": "192x192" }] },
+    { "name": "Les marchés", "url": "./marches.html", "icons": [{ "src": "images/icones/icone-192.png", "sizes": "192x192" }] }
+  ]
+}

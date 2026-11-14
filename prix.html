@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tous les prix — MarchéPrix</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b5470b">
+  <link rel="icon" href="images/icones/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/icones/apple-touch-icon.png">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha384-/Mc/2ffICYME94wcPOYwoL99IzpbvFsDTty0/5V5t22x2n26tp8JRSsxKjvgZuZs" crossorigin="anonymous"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/commun.js"></script>
+  <script defer src="js/prix.js"></script>
+</head>
+<body data-page="prix" data-titre="titre_prix">
+  <header id="navbar" class="entete"></header>
+
+  <main class="conteneur section">
+    <h1 data-i18n="prix_titre">Tous les prix</h1>
+    <p class="sous-titre" data-i18n="prix_sous">Le dernier prix relevé dans chaque marché</p>
+
+    <form class="filtres" role="search" onsubmit="return false">
+      <div class="champ">
+        <label for="filtre-marche" data-i18n="filtre_marche">Marché</label>
+        <select id="filtre-marche"></select>
+      </div>
+      <div class="champ">
+        <label for="recherche" data-i18n="filtre_produit">Produit</label>
+        <input id="recherche" type="search" autocomplete="off" data-i18n-placeholder="recherche_placeholder" placeholder="Ex. riz, oignon…">
+      </div>
+    </form>
+
+    <p class="compteur" id="compteur" role="status"></p>
+    <ul id="liste" class="liste-releves" data-anime></ul>
+    <p id="vide" class="vide" data-i18n="aucun_prix" hidden>Aucun prix trouvé.</p>
+  </main>
+
+  <footer id="footer" class="pied"></footer>
+</body>
+</html>

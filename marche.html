@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marché — MarchéPrix</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b5470b">
+  <link rel="icon" href="images/icones/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/icones/apple-touch-icon.png">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha384-/Mc/2ffICYME94wcPOYwoL99IzpbvFsDTty0/5V5t22x2n26tp8JRSsxKjvgZuZs" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/commun.js"></script>
+  <script defer src="js/marche.js"></script>
+</head>
+<body data-page="marches">
+  <header id="navbar" class="entete"></header>
+
+  <main id="fiche-marche">
+    <section class="marche-cover" id="marche-cover">
+      <div class="marche-cover-texte conteneur">
+        <a href="marches.html" class="retour" data-i18n="retour_marches">Retour aux marchés</a>
+        <h1 id="marche-nom"></h1>
+      </div>
+    </section>
+
+    <div class="conteneur section marche-grille">
+      <div>
+        <p id="marche-description" class="marche-description"></p>
+        <h2 data-i18n="caracteristiques">Caractéristiques</h2>
+        <ul id="marche-caracteristiques" class="caracteristiques"></ul>
+      </div>
+      <div>
+        <h2 data-i18n="localisation">Localisation</h2>
+        <div id="carte" class="carte" dir="ltr"></div>
+        <p class="carte-secours" id="carte-secours" hidden data-i18n="carte_indispo">La carte n'a pas pu se charger.</p>
+        <a id="itineraire" class="lien-fleche" rel="noopener" target="_blank" data-i18n="itineraire">Ouvrir dans OpenStreetMap</a>
+      </div>
+    </div>
+
+    <section class="conteneur section" aria-labelledby="t-prix-marche">
+      <h2 id="t-prix-marche" data-i18n="prix_du_marche">Les prix à ce marché</h2>
+      <ul id="marche-prix" class="liste-releves" data-anime></ul>
+    </section>
+  </main>
+
+  <main id="marche-introuvable" class="conteneur section" hidden>
+    <h1 data-i18n="introuvable">Ce marché est introuvable.</h1>
+    <a href="marches.html" class="btn" data-i18n="retour_marches">Retour aux marchés</a>
+  </main>
+
+  <footer id="footer" class="pied"></footer>
+</body>
+</html>

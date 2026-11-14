@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les marchés — MarchéPrix</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b5470b">
+  <link rel="icon" href="images/icones/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/icones/apple-touch-icon.png">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha384-/Mc/2ffICYME94wcPOYwoL99IzpbvFsDTty0/5V5t22x2n26tp8JRSsxKjvgZuZs" crossorigin="anonymous"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/commun.js"></script>
+  <script defer src="js/marches.js"></script>
+</head>
+<body data-page="marches" data-titre="titre_marches">
+  <header id="navbar" class="entete"></header>
+
+  <main class="conteneur section">
+    <h1 data-i18n="marches_titre">Les marchés</h1>
+    <p class="sous-titre" data-i18n="marches_sous">Où acheter à N'Djamena</p>
+    <ul id="marches" class="grille-marches" data-anime></ul>
+  </main>
+
+  <footer id="footer" class="pied"></footer>
+</body>
+</html>

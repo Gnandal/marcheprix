@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarchéPrix — Les prix des marchés de N'Djamena</title>
+  <meta name="description" content="Comparez les prix des produits dans les marchés de N'Djamena.">
+  <link rel="preload" as="image" href="images/hero-800.jpg" imagesrcset="images/hero-800.jpg 800w, images/hero-1280.jpg 1280w" imagesizes="100vw">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b5470b">
+  <link rel="icon" href="images/icones/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/icones/apple-touch-icon.png">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha384-/Mc/2ffICYME94wcPOYwoL99IzpbvFsDTty0/5V5t22x2n26tp8JRSsxKjvgZuZs" crossorigin="anonymous"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/commun.js"></script>
+  <script defer src="js/accueil.js"></script>
+</head>
+<body data-page="accueil" data-titre="titre_accueil">
+  <header id="navbar" class="entete"></header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-titre">
+      <img class="hero-fond" id="hero-fond" alt="" hidden>
+      <div class="hero-contenu conteneur">
+        <h1 id="hero-titre" class="hero-titre" data-i18n="hero_titre">Payez le juste prix au marché</h1>
+        <p class="hero-texte" data-i18n="hero_sous_titre">Comparez les prix du riz, de l'oignon, de l'huile… dans les marchés de N'Djamena.</p>
+        <form class="recherche" action="prix.html" method="get" role="search">
+          <label for="q" class="visuellement-cache" data-i18n="hero_recherche">Quel produit cherchez-vous ?</label>
+          <input id="q" name="q" type="search" autocomplete="off" data-i18n-placeholder="hero_recherche_placeholder" placeholder="Ex. riz, oignon, huile…">
+          <button class="btn" data-i18n="hero_recherche_btn">Chercher</button>
+        </form>
+        <ul class="stats">
+          <li><strong id="stat-prix">0</strong> <span data-i18n="stat_prix">prix relevés</span></li>
+          <li><strong id="stat-marches">0</strong> <span data-i18n="stat_marches">marchés</span></li>
+          <li><strong id="stat-produits">0</strong> <span data-i18n="stat_produits">produits</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section conteneur" data-anime aria-labelledby="t-populaires">
+      <div class="section-tete">
+        <div>
+          <h2 id="t-populaires" data-i18n="populaires_titre">Les plus consultés</h2>
+          <p data-i18n="populaires_sous">Les produits que l'on regarde le plus</p>
+        </div>
+        <a class="lien-fleche" href="prix.html" data-i18n="voir_tout">Voir tous les prix</a>
+      </div>
+      <ul id="populaires" class="grille-produits"></ul>
+    </section>
+
+    <section class="section conteneur" data-anime aria-labelledby="t-cta">
+      <div class="cta anime-item">
+        <div>
+          <h2 id="t-cta" data-i18n="cta_titre">Vous étiez au marché aujourd'hui ?</h2>
+          <p data-i18n="cta_texte">Partagez un prix en 30 secondes et aidez votre quartier à mieux acheter.</p>
+        </div>
+        <button type="button" id="cta-btn" class="btn btn-clair" data-i18n="cta_btn">Partager un prix</button>
+      </div>
+    </section>
+
+    <section class="section conteneur" data-anime aria-labelledby="t-nouveaux">
+      <div class="section-tete">
+        <div>
+          <h2 id="t-nouveaux" data-i18n="nouveaux_titre">Nouveaux prix</h2>
+          <p data-i18n="nouveaux_sous">Les derniers relevés</p>
+        </div>
+      </div>
+      <ul id="nouveaux" class="liste-releves"></ul>
+    </section>
+
+    <section class="section conteneur" data-anime aria-labelledby="t-newsletter">
+      <div class="newsletter anime-item">
+        <h2 id="t-newsletter" data-i18n="newsletter_titre">Les prix de la semaine dans votre boîte mail</h2>
+        <p data-i18n="newsletter_texte">Un résumé chaque lundi : ce qui monte, ce qui baisse, où acheter moins cher.</p>
+        <form id="newsletter" class="recherche">
+          <label for="email" class="visuellement-cache" data-i18n="newsletter_label">Adresse e-mail</label>
+          <input id="email" name="email" type="email" required autocomplete="email" data-i18n-placeholder="newsletter_placeholder" placeholder="vous@exemple.com">
+          <button class="btn" data-i18n="newsletter_btn">S'inscrire</button>
+        </form>
+        <p id="newsletter-msg" class="message" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="pied"></footer>
+</body>
+</html>
